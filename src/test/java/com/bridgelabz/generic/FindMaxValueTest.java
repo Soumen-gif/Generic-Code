@@ -21,12 +21,12 @@ public class FindMaxValueTest {
     {
         Assert.assertEquals(10,findMaxValue.findMaxInt(5,10,2));
     }
-    /*@Test
+    @Test
     public void whenGivenNo_InThirdPosition_Should_ReturnSameNumber()
     {
         Assert.assertEquals(10,findMaxValue.findMaxInt(10,5,2));
     }
-    @Test
+    /*@Test
     public void whenGivenFloatNo_InFirstPosition_Should_ReturnSameNumber()
     {
         Assert.assertEquals(10.5f,findMaxValue.findMaxFloatValue(10.5f,5.5f,2.5f), 0.0f);
