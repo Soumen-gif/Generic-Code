@@ -12,48 +12,60 @@ public class FindMaxValueTest {
          findMaxValue= new FindMaxValue();
     }
     @Test
-    public void whenGivenNo_InFirstPosition_Should_ReturnSameNumber()
+    public void whenGivenNoInArray_InFirstPosition_Shold_ReturnSameNumber()
     {
-        Assert.assertEquals(10,findMaxValue.findMaxInt(10,5,2));
+        Integer arr[] = {10,5,2};
+        Assert.assertSame(10,findMaxValue.findMaximumValue(arr));
     }
     @Test
-    public void whenGivenNo_InSecondPosition_Should_ReturnSameNumber()
+    public void whenGivenNoInArray_InSecondPosition_Should_ReturnSameNumber()
     {
-        Assert.assertEquals(10,findMaxValue.findMaxInt(5,10,2));
+        Integer arr[] = {5,10,2};
+        Assert.assertSame(10,findMaxValue.findMaximumValue(arr));
     }
     @Test
-    public void whenGivenNo_InThirdPosition_Should_ReturnSameNumber()
+    public void whenGivenNoInArray_InThirdPosition_Should_ReturnSameNumber()
     {
-        Assert.assertEquals(10,findMaxValue.findMaxInt(10,5,2));
-    }
-    /*@Test
-    public void whenGivenFloatNo_InFirstPosition_Should_ReturnSameNumber()
-    {
-        Assert.assertEquals(10.5f,findMaxValue.findMaxFloatValue(10.5f,5.5f,2.5f), 0.0f);
+        Integer arr[] = {2,5,10};
+        Assert.assertSame(10,findMaxValue.findMaximumValue(arr));
     }
     @Test
-    public void whenGivenFloatNo_InSecondPosition_Should_ReturnSameNumber()
+    public void whenGivenFloatNoInArray_InFirstPosition_Should_ReturnSameNumber()
     {
-        Assert.assertEquals(10.5f,findMaxValue.findMaxFloatValue(5.5f,10.5f,2.5f),0.0f);
+        Float arr[] = {10.5f,5.5f,2.5f};
+        Assert.assertEquals(10.5f,findMaxValue.findMaximumValue(arr),0.0);
     }
     @Test
-    public void whenGivenFloatNo_InThirdPosition_Should_ReturnSameNumber()
+    public void whenGivenFloatNoInArray_InSecondPosition_Should_ReturnSameNumber()
     {
-        Assert.assertEquals(10.5f,findMaxValue.findMaxFloatValue(5.5f,2.5f,10.5f),0.0f);
+        Float arr[] = {5.5f,10.5f,2.5f};
+        Assert.assertEquals(10.5f,findMaxValue.findMaximumValue(arr),0.0);
     }
     @Test
-    public void whenGiven_String_InFirstPosition_Should_ReturnSameString()
+    public void whenGivenFloatNoInArray_InThirdPosition_Should_ReturnSameNumber()
     {
-        Assert.assertEquals("Watermelon",findMaxValue.findMaxStringValue("Watermelon","Banana","Apple"));
-    }
-    @Test
-    public void whenGiven_String_InSecondPosition_Should_ReturnSameString()
-    {
-        Assert.assertEquals("Watermelon",findMaxValue.findMaxStringValue("Banana","Watermelon","Apple"));
-    }
-    @Test
-    public void whenGiven_String_InThirdPosition_Should_ReturnSameString() {
-        Assert.assertEquals("Watermelon", findMaxValue.findMaxStringValue("Banana", "Apple", "Watermelon"));
-    }*/
 
+        Float arr[] = {2.5f,5.5f,10.5f};
+        Assert.assertEquals(10.5,findMaxValue.findMaximumValue(arr),0.0);
+    }
+
+    @Test
+    public void whenGivenStringInArray_InFirstPosition_Should_ReturnSameString()
+    {
+        String arr[] = {"watermelon" , "apple"  , "banana"};
+        Assert.assertEquals("watermelon",findMaxValue.findMaximumValue(arr));
+    }
+    @Test
+    public void whenGivenStringInArray_InSecondPosition_thenReturnSameString()
+    {
+        String arr[] = { "apple"  , "watermelon" , "banana"};
+        Assert.assertEquals("watermelon",findMaxValue.findMaximumValue(arr));
+    }
+    @Test
+    public void whenGivenString_InThirdPosition_thenReturnSameString()
+    {
+        String arr[] = { "apple"  , "banana" , "watermelon"};
+        Assert.assertEquals("watermelon",findMaxValue.findMaximumValue(arr));
+    }
 }
+
