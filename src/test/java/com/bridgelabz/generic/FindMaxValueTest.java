@@ -16,7 +16,7 @@ public class FindMaxValueTest {
     {
         Assert.assertEquals(10,findMaxValue.findMaxInt(10,5,2));
     }
-    @Test
+    /*@Test
     public void whenGivenNo_InSecondPosition_Should_ReturnSameNumber()
     {
         Assert.assertEquals(10,findMaxValue.findMaxInt(5,10,2));
@@ -52,9 +52,8 @@ public class FindMaxValueTest {
         Assert.assertEquals("Watermelon",findMaxValue.findMaxStringValue("Banana","Watermelon","Apple"));
     }
     @Test
-    public void whenGiven_String_InThirdPosition_Should_ReturnSameString()
-    {
-        Assert.assertEquals("Watermelon",findMaxValue.findMaxStringValue("Banana","Apple","Watermelon"));
-    }
+    public void whenGiven_String_InThirdPosition_Should_ReturnSameString() {
+        Assert.assertEquals("Watermelon", findMaxValue.findMaxStringValue("Banana", "Apple", "Watermelon"));
+    }*/
 
 }
