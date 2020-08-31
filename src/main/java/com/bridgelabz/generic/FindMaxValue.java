@@ -19,5 +19,14 @@ public class FindMaxValue {
         else
             return c;
     }
+    public String findMaxStringValue(String a, String b, String c)
+    {
+        if(a.length() > b.length() && b.length() > c.length())
+            return a;
+        else if (b.length() > a.length())
+            return b;
+        else
+            return c;
+    }
 
 }
