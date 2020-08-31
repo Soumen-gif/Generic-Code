@@ -14,17 +14,31 @@ public class FindMaxValueTest {
     @Test
     public void whenGivenNo_InFirstPosition_Should_ReturnSameNumber()
     {
-        Assert.assertEquals(40,findMaxValue.findMaxInt(40,20,10));
+        Assert.assertEquals(10,findMaxValue.findMaxInt(10,5,2));
     }
     @Test
     public void whenGivenNo_InSecondPosition_Should_ReturnSameNumber()
     {
-        Assert.assertEquals(40,findMaxValue.findMaxInt(20,40,10));
+        Assert.assertEquals(10,findMaxValue.findMaxInt(5,10,2));
     }
     @Test
     public void whenGivenNo_InThirdPosition_Should_ReturnSameNumber()
     {
-        Assert.assertEquals(40,findMaxValue.findMaxInt(10,20,40));
+        Assert.assertEquals(10,findMaxValue.findMaxInt(10,5,2));
     }
-
+    @Test
+    public void whenGivenFloatNo_InFirstPosition_Should_ReturnSameNumber()
+    {
+        Assert.assertEquals(10.5f,findMaxValue.findMaxFloatValue(10.5f,5.5f,2.5f), 0.0f);
+    }
+    @Test
+    public void whenGivenFloatNo_InSecondPosition_Should_ReturnSameNumber()
+    {
+        Assert.assertEquals(10.5f,findMaxValue.findMaxFloatValue(5.5f,10.5f,2.5f),0.0f);
+    }
+    @Test
+    public void whenGivenFloatNo_InThirdPosition_Should_ReturnSameNumber()
+    {
+        Assert.assertEquals(10.5f,findMaxValue.findMaxFloatValue(5.5f,2.5f,10.5f),0.0f);
+    }
 }
