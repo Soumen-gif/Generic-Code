@@ -1,40 +1,36 @@
 package com.bridgelabz.generic;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
 public class FindMaxValue <E extends Comparable <E>>{
     E[] values;
-    //List of Generic Values
-    List<E> listValues = new LinkedList<>();
-
-    //Constructor to Initialize Generic Array
-    public FindMaxValue(E[] values) {
+    @SafeVarargs
+    public FindMaxValue(E... values) {
         this.values = values;
     }
 
-    //Constructor to Initialize Generic List
-    public FindMaxValue(List<E> listValues) {
-        this.listValues = listValues;
-    }
-
-    //Method to Find  Max Value From List
-    public E findMax() {
-        return Collections.max(listValues);
-    }
-
-    //Method to Find Max Value Form Array
-    public E findMaxValue() {
-        if (values[0].compareTo(values[1]) > 0 && values[0].compareTo(values[2]) > 0) {
-            return values[0];
-        } else if (values[1].compareTo(values[0]) > 0 && values[1].compareTo(values[2]) > 0) {
-            return values[1];
+    public E findMaxValue() throws FindMaxException {
+        if (values.length == 0) {
+            throw new FindMaxException("Please enter some value there is no element");
         } else {
-            return values[2];
+            Arrays.sort(values);
+            printMax(values[values.length - 1]);
+            return values[values.length - 1];
         }
     }
 
+    /*
+     *Method to print Max Value
+     * @param is Generic Value
+     */
+    public void printMax(E value) {
+        System.out.println("Max Value = " + value);
+    }
 }
+
+
 
 
